@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>01 - Escopo no JS</title>
+    </head>
+    <body></body>
+    <script>
+
+        var animal = 'cat';
+
+        console.log(animal)
+        
+       {
+           let animal = 'dog'; // garantir que a variavel vai existir uma unica vez e nao será rescrita fora do escopo
+           console.log(animal)
+       }
+
+       console.log(animal)
+    </script>
+</html>

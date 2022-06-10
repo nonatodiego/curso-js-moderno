@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        
+        <button id="btn">make my sandwich!</button>
+
+    </body>
+    <script>
+
+        const sandwich = {
+            bread: 'australian',
+            cheese: 'cheedar',
+
+            prepare: function(){
+                return `I want a sandwich with ${this.bread} breand and ${this.cheese}` 
+            },
+
+            // make: function() {
+            //     var that = this;
+            //     window.setTimeout(function () {
+            //         console.log(that.prepare());
+            //     }, 500);
+            // }
+
+            // com a Arrow function o this funciona sem precisar coloca-ló em uma variavel
+            make: function() {
+                window.setTimeout(() => {
+                    console.log(this.prepare());
+                }, 500);
+            }
+        }
+
+        const btn = document.getElementById('btn')
+
+        btn.addEventListener('click', function(){
+            sandwich.make()
+        })
+
+    </script>
+</html>
